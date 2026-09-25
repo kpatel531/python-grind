@@ -174,3 +174,162 @@ Floor Division (//): Divides and rounds down to the nearest whole number (10 // 
 Modulus (%): Returns the division remainder (10 % 3 → 1).
 Exponentiation (**): Raises a number to a power (2 ** 3 → 8).
 """
+
+# Boolean
+"""
+Topic: Boolean
+Defination: A boolean value is either True or False.
+Program:
+"""
+
+# Creating boolean variables
+is_true = True
+has_error = False
+
+print(type(is_true))  # Output: <class 'bool'>
+
+# Comparison Operators
+print(5 == 5)  # Output: True
+print(5 != 5)  # Output: False
+print(5 > 3)   # Output: True
+print(5 < 3)   # Output: False
+print(5 >= 5)  # Output: True
+print(5 <= 3)  # Output: False
+
+# Logical Operators (Combining boolean values)
+print(is_true and has_error)  # Output: False
+print(is_true or has_error)   # Output: True
+print(not is_true)            # Output: False
+
+# Advanced not: Booleans are integers in Python, where True is 1 and False is 0. This allows for arithmetic operations with boolean values.
+print(True + True)   # Output: 2
+print(False + False) # Output: 0
+
+# Type conversion (Casting)
+"""
+Topic: Type Conversion
+Defination: Type conversion is the process of converting a value from one data type to another.
+Program:
+"""
+
+# Implicit Type Conversion (Type Casting) Conversion: Python automatically converts one data type to another when necessary.
+num1 = 10      # int
+num2 = 5.5     # float
+result = num1 + num2  # Implicit conversion: int is converted to float
+print(result)  # Output: 15.5
+print(type(result))  # Output: <class 'float'>
+
+# Explicit Type Conversion (Type Casting) Conversion: The programmer manually converts a value from one data type to another using built-in functions.
+num_str = "100"
+num_int = int(num_str)  # Explicit conversion from string to int
+print(num_int)  # Output: 100
+
+num_float = float(num_int)  # Explicit conversion from int to float
+print(num_float)  # Output: 100.0
+
+num_complex = complex(num_float)  # Explicit conversion from float to complex
+print(num_complex)  # Output: (100+0j)
+
+num_bool = bool(num_int)  # Explicit conversion from int to bool
+print(num_bool)  # Output: True
+
+
+# Input
+"""
+Topic: Input
+Defination: Input is a way to get data from the user during program execution.
+Program:
+"""
+
+# Basic Input
+user_input = input("Enter something: ")
+print("You entered:", user_input)
+
+# Type Conversion with Input
+age = int(input("Enter your age: "))
+print("Your age is:", age)
+
+price = float(input("Enter the price: "))
+print("The price is:", price)
+
+# Splitting Input
+numbers = input("Enter numbers separated by spaces: ")
+number_list = numbers.split()
+print("The numbers are:", number_list)
+
+# Comparison operators
+"""
+Topic: Comparison Operators
+Defination: Comparison operators are used to compare two values and return a boolean result (True or False).
+Program:
+"""
+
+print(5 == 5)  # Output: True
+print(5 != 3)  # Output: True   
+print(5 > 3)   # Output: True
+print(5 < 3)   # Output: False
+print(5 >= 5)  # Output: True
+print(5 <= 3)  # Output: False
+print(5 == 5.0)  # Output: True (int and float comparison)
+print(5 is "5")  # Output: False
+
+# logical operators
+"""
+Topic: Logical Operators
+Defination: Logical operators are used to combine conditional statements and return a boolean result (True or
+    False).
+Program:
+"""
+
+print(True and False)  # Output: False
+print(True or False)   # Output: True
+print(not True)        # Output: False
+
+# if / elif / else
+"""
+Topic: if / elif / else
+Defination: The if statement is used to execute a block of code if a condition is true. The elif statement is used to check another condition if the previous condition is false. The else statement is used to execute a block of code if all previous conditions are false.
+Program:
+"""
+
+print("Enter a number:")
+num = int(input())
+if num > 0:
+    print("The number is positive.")
+elif num < 0:
+    print("The number is negative.")
+else:
+    print("The number is zero.")
+
+
+# Loops
+"""
+Topic: Loops
+Defination: Loops are used to execute a block of code repeatedly as long as a condition
+is true. Python has two main types of loops: for loops and while loops.
+Program:
+"""
+
+# for loop
+for i in range(5):  # Loop from 0 to 4
+    print("Iteration:", i)
+
+# while loop
+counter = 0
+while counter < 5:  # Loop until counter is less than 5
+    print("Counter:", counter)
+    counter += 1  # Increment counter by 1
+
+# Loop Control Statements
+"""
+break: Exits the loop immediately.
+continue: Skips the rest of the code inside the loop for the current iteration and moves to the next iteration.
+"""
+
+for i in range(10):
+    if i == 5:
+        break  # Exit the loop when i is 5
+    if i == 3:
+        continue  # Skip the rest of the code when i is 3
+    print("Current value:", i)
+
