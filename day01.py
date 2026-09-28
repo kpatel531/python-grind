@@ -326,10 +326,114 @@ break: Exits the loop immediately.
 continue: Skips the rest of the code inside the loop for the current iteration and moves to the next iteration.
 """
 
+
+# For Loop: A for loop is used to iterate over a sequence or an iterable object (such as a list, tuple, string, dictionary, or range). It executes a fixed number of times based on the size of the sequence.
 for i in range(10):
+    if i == 3:
+            continue  # Skip this current iteration when i is 3
     if i == 5:
         break  # Exit the loop when i is 5
-    if i == 3:
-        continue  # Skip the rest of the code when i is 3
     print("Current value:", i)
+
+
+# While Loop: A while loop executes a block of code as long as a specific boolean condition remains True. It is typically used when the exact number of iterations is not known beforehand.
+count = 0
+while count < 5:
+    print(count)
+    count += 1 # Crucial to update the condition to avoid an infinite loop
+
+
+# Lists
+"""
+Topic: Lists
+Defination: list is a built-in, ordered, and mutable collection of items enclosed in square brackets [].
+    non-primitive data structure which hold mulriple types of data init.
+Program:
+"""
+
+# Creating a list: You can define a list by placing comma-separated values inside square brackets, or by using the built-in list() constructor
+
+# Empty list
+empty_lst = []
+print(empty_lst)
+
+# List with items
+fruits = ["apple", "banana", "cherry"]
+print(fruits)
+
+# Mixed data types
+mixed_lst = ["Python", 3.14, True, 42]
+print(mixed_lst)
+
+# Using the list() constructor
+chars = list("hello")  # ['h', 'e', 'l', 'l', 'o']
+print(chars)
+
+
+# List. Accessing Elements (Indexing & Slicing)
+#: Python uses zero-based indexing, meaning the first item is at index 0. You can also use negative indexing to access items starting from the end of the list (-1 represents the last item).
+
+planets = ["Mercury", "Venus", "Earth", "Mars"]
+
+print(planets[0])   # Output: Mercury
+print(planets[-1])  # Output: Mars (last item)
+
+# Slicing: [start:stop] extracts a portion of the list
+print(planets[1:3]) # Output: ['Venus', 'Earth']
+
+
+
+# List. Modifying Elements
+#. Because lists are mutable, you can change their contents directly by referencing their index
+
+numbers = [10, 20, 30]
+numbers[1] = 99
+print(numbers) # Output: [10, 99, 30]
+
+
+# Common List Methods & Operations : Python provides several built-in methods to manipulate lists
+'''
+Adding Items
+   - .append(item): Adds an item to the end of the list.
+   - .insert(index, item): Inserts an item at a specific position.
+   - .extend(iterable): Appends multiple elements (like another list) to the end.
+'''
+
+items = ["a", "b"]
+items.append("c")       # ['a', 'b', 'c']
+items.insert(1, "z")    # ['a', 'z', 'b', 'c']
+items.extend(["d", "e"]) # ['a', 'z', 'b', 'c', 'd', 'e']
+
+'''
+Removing Items
+    - .pop(index): Removes and returns the item at the given index. If no index is provided, it removes the last item.
+    - .remove(item): Removes the first occurrence of a specific value.
+    - .clear(): Removes all items from the list.
+'''
+items = ["a", "b", "c", "b"]
+items.pop()        # Removes 'b' and returns it
+items.remove("b")  # Removes the first 'b'
+print(items)       # Output: ['a', 'c']
+
+'''
+Utility Methods
+    - len(list): Built-in function that returns the total number of elements.
+    - .sort(): Sorts the list in place (ascending order by default).
+    - .reverse(): Reverses the elements of the list in place.
+'''
+# Ascending order (Default)
+numbers = [4, 2, 5, 1, 3]
+numbers.sort()
+print(numbers)  
+# Output: [1, 2, 3, 4, 5]
+
+# Descending order
+numbers.sort(reverse=True)
+print(numbers)  
+# Output: [5, 4, 3, 2, 1]
+
+#  Iterating Through a List: You can easily loop through the items of a list using a for loop
+colors = ["red", "green", "blue"]
+for color in colors:
+    print(color)
 
