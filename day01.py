@@ -424,12 +424,12 @@ Utility Methods
 # Ascending order (Default)
 numbers = [4, 2, 5, 1, 3]
 numbers.sort()
-print(numbers)  
+print(numbers)
 # Output: [1, 2, 3, 4, 5]
 
 # Descending order
 numbers.sort(reverse=True)
-print(numbers)  
+print(numbers)
 # Output: [5, 4, 3, 2, 1]
 
 #  Iterating Through a List: You can easily loop through the items of a list using a for loop
